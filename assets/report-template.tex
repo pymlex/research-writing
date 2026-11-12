@@ -1,0 +1,94 @@
+\documentclass[14pt,a4paper]{extarticle}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\usepackage{tempora} 
+\usepackage{newtxmath}
+
+\geometry{left=3cm,right=1.5cm,top=2cm,bottom=2cm}
+\setstretch{1.5}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+urlcolor=black,
+citecolor=black
+}
+
+\titleformat{\section}{\bfseries\large}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection.}{0.5em}{}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} 
+
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\sloppy
+\thispagestyle{empty}
+\begin{center}
+{\bfseries ОТЧЁТ}
+\vspace{1cm}
+
+{\bfseries Название исследования}
+\end{center}
+\vfill
+\begin{flushright}
+Автор и организация, если заданы
+\end{flushright}
+\vfill
+\begin{center}
+Город, год
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+\section{Постановка задачи}
+Предмет, вопрос, сравниваемые варианты и ожидаемый результат.
+\section{Исходные данные и методика}
+Источник данных и условия опыта~\cite{manual}.
+\begin{equation}
+U=\sum_i F_i(\rho_i)+\frac12\sum_{i\ne j}\phi_{ij}(r_{ij}).
+\label{eq:energy}
+\end{equation}
+Обозначения поясняются в тексте после формулы.
+\section{Результаты}
+В таблице~\ref{tab:settings} приведены настройки.
+\begin{table}[htbp]
+\centering
+\caption{Пример оформления настроек}
+\label{tab:settings}
+\small
+\begin{tabularx}{\textwidth}{@{}Xrr@{}}
+\toprule
+Вариант & Параметр, эВ & Расстояние, \AA\\
+\midrule
+Исходный & 1,00 & 2,00\\
+Изменённый & 1,25 & 2,00\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\section{Выводы}
+Ответ на вопрос исследования и область применимости.
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{Список литературы}
+\bibitem{manual} Автор. Название. Год. URL: \url{https://example.org}.
+\end{thebibliography}
+\end{document}
